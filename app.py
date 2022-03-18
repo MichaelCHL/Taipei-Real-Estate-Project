@@ -47,7 +47,7 @@ def predict():
 
         prediction = np.exp(model.predict(new))
 
-        return render_template('index.html', Predict_score = 'The estimate price is {}'.format(prediction))
+        return render_template('index.html', Predict_score = 'The estimate price is {} NTD'.format(int(prediction)))
 
 if __name__ == '__main__':
     app.run(debug=True)
